@@ -22,8 +22,8 @@ def getNumFacesWithVar(num, *pars):
         intVar = [j+var[i] for j in newpar[:-2]]
         facer, eyer1, eyer2, eyep1, eyep2, noser, nosep1, nosep2, mouser  = intVar
         bigCol, smallCol = newpar[-2:]
-        oneFace(facer, eyer1, eyer2, eyep1, eyep2, noser, nosep1, nosep2, mouser, bigCol, smallCol)
-        saveImgAndConvert(i, screen)
+        turtle = oneFace(facer, eyer1, eyer2, eyep1, eyep2, noser, nosep1, nosep2, mouser, bigCol, smallCol)
+        saveImgAndConvert(i, screen, turtle)
 
 
 if __name__ == "__main__":

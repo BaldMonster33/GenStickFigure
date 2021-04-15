@@ -70,7 +70,8 @@ def oneFace(*pars):
     nose(noser, turtle, nosep1, nosep2)
     mouse(mouser, turtle)
     # Clear for next turtles
-    turtle.clear()
+    return turtle
+
 
 
 def setEnv():
@@ -85,7 +86,7 @@ def setEnv():
     return screen
 
 
-def saveImgAndConvert(i, screen):
+def saveImgAndConvert(i, screen, turtle):
     cv = screen.getcanvas()
     fn = str(i) + ".ps"
     cv.postscript(file=fn, colormode='color')
@@ -93,6 +94,7 @@ def saveImgAndConvert(i, screen):
     image.save(str(i) + '.jpeg', 'jpeg')
     print(str(i) + 'is done')
     os.remove(fn)
+    turtle.clear()
 
 
 def main():
